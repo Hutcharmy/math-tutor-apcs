@@ -14,7 +14,7 @@ public class AdditionEasy extends Operation {
 		return ans;
 	}
 	public String displayQuestion(){
-		return "What is the sum of "+num1+" and "+num2+"?";
+		return "What is "+num1+" + "+num2+"?";
 	}
 	public boolean test(int testVal) {
 		if(testVal==this.ans){
