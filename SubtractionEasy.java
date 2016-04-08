@@ -2,11 +2,11 @@ import java.util.Random;
 
 public class SubtractionEasy extends Operation {
 	Random rand=new Random();
-	public SubtractionEasy(){
-		super(10);
+	public SubtractionEasy(int k){
+		super(10,k);
 	}
 	@Override
-	public void getQuestion() {
+	public void generateQuestion() {
 		while(true){
 			num1=rand.nextInt(6);
 			num2=rand.nextInt(6);
@@ -16,19 +16,10 @@ public class SubtractionEasy extends Operation {
 		}
 	}	
 	@Override
-	public int getAnswer() {
+	public void generateAnswer() {
 		ans=num1-num2;
-		return 0;
 	}
-	@Override
-	public boolean test(int testVal) {
-		if(testVal==ans){
-			return true;
-		}
-		else{
-			return false;
-		}
-	}
+
 	@Override
 	public String displayQuestion() {
 		
@@ -36,6 +27,7 @@ public class SubtractionEasy extends Operation {
 	}
 	private int num1;
 	private int num2;
+	@SuppressWarnings("unused")
 	private int ans;
 	@SuppressWarnings("unused")
 	private int points;
